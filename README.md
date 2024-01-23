@@ -8,13 +8,11 @@ We propose a framework that integrates Multiple Instance Learning (MIL) with a u
 
 ## Key Contributions
 - **Innovative Two-Stage Model:**: Our research introduces a new approach to analyzing and classifying histopathology images, particularly for microsatellite instability (MSI) in gastrointestinal cancers.
-- **Contrastive Clustering-Based Feature Extraction**: Efficient labeling through MIL, allowing for better handling of complex datasets like WSIs.
+- **Contrastive Clustering-Based Feature Extraction**: We integrate a contrastive clustering-based feature extractor, leading to significant improvements in performance compared to previous network designs. 
 - **Enhanced Prediction in MSI Classification**: Notable improvement in MSI classification, demonstrated through experiments using colorectal cancer and stomach adenocarcinoma datasets.
 
 ## Datasets
-The evaluation was conducted using two image datasets from the TCGA cohort:
-- Colorectal Cancer (CRC)
-- Stomach Adenocarcinoma (STAD)
+The model was trained and evaluated on the Colorectal Cancer (CRC) and Stomach Adenocarcinoma (STAD) datasets, with the performance assessed using AUROC and F1 Score metrics.
   
 | Dataset | Folder | \# of WSIs (Train) | \# of WSIs (Test) | \# of Patches (Train) | \# of Patches (Test) |
 |---------|--------|------------------|-----------------|--------------------|-------------------|
@@ -26,6 +24,7 @@ The evaluation was conducted using two image datasets from the TCGA cohort:
 The datasets can be accessed [here](https://zenodo.org/records/2530835).
 
 # Usage
+The code is split into two folders: Section 1 focuses on Feature Extractor Training and Feature Extraction. Section 2 deals with Multiple Instance Learning Classifiers and constructing bags using the feature vectors.
 
 ## Requirements
 - 
@@ -35,10 +34,10 @@ The datasets can be accessed [here](https://zenodo.org/records/2530835).
 - 
 
 ## Code Structure
--
--
--
--
+- `data/`: Data loading and preprocessing scripts.
+- `models/`: Implementation of CCNet and MIL classifiers.
+- `training/`: Scripts for training and evaluating the model.
+- `utils/`: Utility functions and helpers.
 
 ## Citation
 If you find our work useful, please consider citing our paper:
@@ -49,3 +48,4 @@ If you find our work useful, please consider citing our paper:
   journal={EMBC},
   year={2024}
 }
+```
