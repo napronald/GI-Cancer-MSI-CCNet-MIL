@@ -1,8 +1,8 @@
 # GI-Cancer-MSI-CCNet-MIL
-This repository contains the code and resources for our paper "". The project focuses on enhancing microsatellite instability (MSI) prediction in Whole Slide Image (WSI) analysis of gastrointestinal cancers through a novel two-stage weakly supervised methodology.
+This repository contains the code and resources for the paper "Contrastive Pre-Training and Multiple Instance Learning for Predicting Tumor Microsatellite Instability". The project focuses on enhancing microsatellite instability (MSI) prediction in Whole Slide Image (WSI) analysis of gastrointestinal cancers through a two-stage weakly supervised methodology.
 
 ## Overview
-We propose a framework that integrates Multiple Instance Learning (MIL) with a unique Contrastive Clustering Network (CCNet) for feature extraction. The method leverages the synergy of these approaches to significantly improve MSI classification accuracy, surpassing existing methods in the field.
+We propose a framework that integrates Multiple Instance Learning (MIL) with a Contrastive Clustering Network (CCNet) for feature extraction. The method leverages the synergy of these approaches to significantly improve MSI classification accuracy, surpassing existing methods in the field.
 
 ![Figure 1](https://github.com/napronald/GI-Cancer-MSI-CCNet-MIL/blob/main/Figures/Figure1.png)
 
@@ -26,24 +26,24 @@ The datasets can be accessed [here](https://zenodo.org/records/2530835).
 # Usage
 The code is split into two folders: Section 1 focuses on Feature Extractor Training and Feature Extraction. Section 2 deals with Multiple Instance Learning Classifiers and constructing bags using the feature vectors.
 
-## Requirements
-- 
-- 
-- 
-- 
-- 
+## Set Up
+- Python 3.8+
+- PyTorch 1.9.0
+- torchvision 0.11.2
+- scikit-learn 0.24.2
+- pandas 1.1.5
+- numpy 1.19.5
+- scipy 1.5.4
 
 ## Code Structure
-- `data/`: Data loading and preprocessing scripts.
-- `models/`: Implementation of CCNet and MIL classifiers.
-- `training/`: Scripts for training and evaluating the model.
-- `utils/`: Utility functions and helpers.
+-
+-
 
 ## Citation
 If you find our work useful, please consider citing our paper:
 ```bibtex
 @article{nap2024,
-  title={},
+  title={Contrastive Pre-Training and Multiple Instance Learning for Predicting Tumor Microsatellite Instability},
   author={Nap, Ronald and Aburidi, Mohammed and Marcia, Roummel},
   journal={EMBC},
   year={2024}
