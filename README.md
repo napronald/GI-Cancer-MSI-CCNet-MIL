@@ -1,15 +1,11 @@
 # GI-Cancer-MSI-CCNet-MIL
-This repository contains the code and resources for the paper "Contrastive Pre-Training and Multiple Instance Learning for Predicting Tumor Microsatellite Instability". The project focuses on enhancing microsatellite instability (MSI) prediction in Whole Slide Image (WSI) analysis of gastrointestinal cancers through a two-stage weakly supervised methodology.
+This repository contains the code for the paper "Contrastive Pre-Training and Multiple Instance Learning for Predicting Tumor Microsatellite Instability" (EMBC 2024). The project focuses on enhancing microsatellite instability (MSI) prediction in Whole Slide Image (WSI) analysis of gastrointestinal cancers through a two-stage weakly supervised methodod.
 
 ## Overview
 We propose a framework that integrates Multiple Instance Learning (MIL) with a Contrastive Clustering Network (CCNet) for feature extraction. The method leverages the synergy of these approaches to significantly improve MSI classification accuracy, surpassing existing methods in the field.
 
 ![Figure 1](https://github.com/napronald/GI-Cancer-MSI-CCNet-MIL/blob/main/Figures/Figure1.png)
 
-## Key Contributions
-- **Innovative Two-Stage Model:**: Our research introduces a new approach to analyzing and classifying histopathology images, particularly for microsatellite instability (MSI) in gastrointestinal cancers.
-- **Contrastive Clustering-Based Feature Extraction**: We integrate a contrastive clustering-based feature extractor, leading to significant improvements in performance compared to previous network designs. 
-- **Enhanced Prediction in MSI Classification**: Notable improvement in MSI classification, demonstrated through experiments using colorectal cancer and stomach adenocarcinoma datasets.
 
 ## Datasets
 The model was trained and evaluated on the Colorectal Cancer (CRC) and Stomach Adenocarcinoma (STAD) datasets, with the performance assessed using AUROC and F1 Score metrics.
@@ -26,6 +22,25 @@ The datasets can be accessed [here](https://zenodo.org/records/2530835).
 # Usage
 The code is split into two folders: Section 1 focuses on Feature Extractor Training and Feature Extraction. Section 2 deals with Multiple Instance Learning Classifiers and constructing bags using the feature vectors.
 
+## Stage 1
+You can start the training process by running:
+
+```bash
+python train.py
+```
+Once the training is completed, there will be a saved model in the "model_path" specified in arguments. To perform extraction with the trained model, run
+
+```bash
+python extractor.py
+```
+
+## Stage 2
+You can start the 5-fold classification process by running:
+
+```bash
+python classifier.py
+```
+
 ## Set Up
 - Python 3.8+
 - PyTorch 1.9.0
@@ -34,10 +49,6 @@ The code is split into two folders: Section 1 focuses on Feature Extractor Train
 - pandas 1.1.5
 - numpy 1.19.5
 - scipy 1.5.4
-
-## Code Structure
--
--
 
 ## Citation
 If you find our work useful, please consider citing our paper:
