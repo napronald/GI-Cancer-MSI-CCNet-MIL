@@ -1,5 +1,5 @@
 # GI-Cancer-MSI-CCNet-MIL
-This repository contains the code for the paper "Contrastive Pre-Training and Multiple Instance Learning for Predicting Tumor Microsatellite Instability" (EMBC 2024). The project focuses on enhancing microsatellite instability (MSI) prediction in Whole Slide Image (WSI) analysis of gastrointestinal cancers through a two-stage weakly supervised methodod.
+This repository contains the code for the paper "Contrastive Pre-Training and Multiple Instance Learning for Predicting Tumor Microsatellite Instability" (EMBC 2024). The project focuses on enhancing microsatellite instability (MSI) prediction in Whole Slide Image (WSI) analysis of gastrointestinal cancers through a two-stage weakly supervised methodology.
 
 ## Overview
 We propose a framework that integrates Multiple Instance Learning (MIL) with a Contrastive Clustering Network (CCNet) for feature extraction. The method leverages the synergy of these approaches to significantly improve MSI classification accuracy, surpassing existing methods in the field.
